@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiero participar</title>
+  <title>Votación</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="/styles/normalize.css">
   <link rel="stylesheet" href="/styles/styles.css">
@@ -21,10 +21,10 @@
     <nav>
       <a href="/index.html">Inicio</a>
       <div class="bolita"></div>
-      <a href="/src/pages/participate.html">Quiero participar</a>
+      <a href="/src/pages/vote.html">Votación</a>
     </nav>
 
-    <h1 class="mb-3">Quiero participar</h1>
+    <h1 class="mb-3">Votación</h1>
     
     <form method="POST" enctype="multipart/form-data" class="d-flex flex-column dashed-border p-4">
 
@@ -46,20 +46,8 @@
       </label>
       <input type="password" class="mb-3  p-2" id="pin" name="pin" placeholder="Introduce tu PIN" required>
     
-      <!-- Título del Cartel -->
-      <label for="titulo" class="form-label">Título del Cartel</label>
-      <input type="text" class="mb-3 p-2" id="titulo" name="titulo" placeholder="Título del cartel" required>
-    
-      <!-- Descripción del Cartel -->
-      <label for="descripcion" class="form-label">Descripción del Cartel</label>
-      <textarea class="mb-3 p-2" id="descripcion" name="descripcion" rows="4" placeholder="Describe brevemente tu cartel" required></textarea>
-    
-      <!-- Archivo -->
-      <label for="archivo" class="form-label">Sube tu archivo</label>
-      <input class="mb-3 p-2" type="file" id="archivo" name="archivo" accept=".jpg,.jpeg,.png,.pdf" required>
-    
       <!-- Botón -->
-      <button type="submit" class="button">Enviar Propuesta</button>
+      <button type="submit" class="button">Enviar mi voto</button>
     </form>
 
 

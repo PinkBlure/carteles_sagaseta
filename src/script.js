@@ -12,23 +12,30 @@ fetch('/src/components/footer/footer.html')
   })
   .catch(error => console.error('Error cargando el footer:', error));
 
-  const scrollToTopButton = document.getElementById('scrollToTop');
+const scrollToTopButton = document.getElementById('scrollToTop');
 
-  // Mostrar u ocultar el botón dependiendo del scroll
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) { // Mostrar si se ha desplazado más de 200px
-      scrollToTopButton.classList.add('show');
-      scrollToTopButton.classList.remove('hide');
-    } else {
-      scrollToTopButton.classList.add('hide');
-      scrollToTopButton.classList.remove('show');
-    }
+// Mostrar u ocultar el botón dependiendo del scroll
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) { // Mostrar si se ha desplazado más de 200px
+    scrollToTopButton.classList.add('show');
+    scrollToTopButton.classList.remove('hide');
+  } else {
+    scrollToTopButton.classList.add('hide');
+    scrollToTopButton.classList.remove('show');
+  }
+});
+
+// Desplazar hacia arriba al hacer clic
+scrollToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth', // Scroll suave
   });
-  
-  // Desplazar hacia arriba al hacer clic
-  scrollToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth', // Scroll suave
-    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
   });
+});
