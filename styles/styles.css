@@ -76,3 +76,11 @@ main nav a:hover {
   font-size: 24px;  /* Tamaño de la flecha */
   color: black;     /* Color negro de la flecha */
 }
+
+/* Media Query para tablet y pantallas más grandes */
+@media (min-width: 768px) {
+  main.content-main {
+    width: 70%;  /* Limita el ancho del main al 70% de la pantalla */
+    margin: 0 auto;  /* Centra el contenido horizontalmente */
+  }
+}

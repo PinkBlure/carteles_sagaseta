@@ -1,3 +1,4 @@
+/* Estilos generales */
 .header-image {
   position: relative;
   width: 100%;
@@ -23,12 +24,13 @@
 
 .header-content {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
   text-align: center;
   width: 100%;
-  flex-direction: column;
+  flex-direction: column; /* Coloca los elementos en una columna */
   padding: .5rem 0;
+  gap: 1rem; /* Espacio entre los elementos */
 }
 
 .header-content .logo-x {
@@ -37,6 +39,13 @@
   align-items: center;
   gap: 1rem;
   margin-bottom: 1rem;
+}
+
+.header-content .logo-x img {
+  max-width: 150px; /* Ajusta el tamaño máximo del logo */
+  max-height: 50px; /* Ajusta la altura máxima del logo */
+  width: auto; /* Mantiene la proporción */
+  height: auto; /* Mantiene la proporción */
 }
 
 .section-alert {
@@ -52,11 +61,16 @@
   margin-bottom: 0;
 }
 
+section nav {
+  background-color: #1C2E5E; /* Fondo de los botones también */
+  padding: 1rem 0; /* Añadimos algo de relleno al contenedor */
+}
+
 section nav a {
   display: block;
   padding: 10px 15px;
   text-align: center;
-  background-color: #1C2E5E;
+  background-color: transparent; /* Botones sin color de fondo para heredar el del contenedor */
   color: white;
   text-decoration: none;
   border-radius: 0;
@@ -66,4 +80,56 @@ section nav a:hover {
   background-color: #DECB37;
   color: black;
   font-weight: bold;
+}
+
+
+@media (min-width: 768px) {
+
+  .header-content {
+    flex-direction: row; /* Cambiar a fila */
+    justify-content: center; /* Centrar todo horizontalmente */
+    gap: 2rem; /* Aumenta el espacio entre los elementos */
+  }
+
+  .header-content .logo-x {
+    margin-bottom: 0;
+  }
+
+  /* Ajustamos el tamaño de la imagen "Día de Canarias" en pantallas grandes */
+  .header-image img {
+    width: auto; /* Mantiene la proporción */
+    max-width: 100%; /* Limita el tamaño máximo de la imagen a 50% */
+    max-height: 10rem; /* Asegura que la imagen tenga una altura máxima de 10rem */
+  }
+
+  /* Disposición en fila para los enlaces del nav */
+  section nav {
+    display: flex;
+    justify-content: center; /* Centra los enlaces */
+    align-items: center;
+    gap: 10px; /* Añade espacio entre los enlaces */
+    text-decoration: none;
+  }
+
+  section nav a {
+    display: inline-block; /* Cambio para que los enlaces se alineen horizontalmente */
+    padding: 10px 20px;
+    margin: 0 5px; /* Espacio entre enlaces */
+    text-align: center;
+    background-color: transparent; /* Botones sin fondo para heredar el fondo del contenedor */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; /* Bordes redondeados */
+  }
+
+  section nav a:hover {
+    background-color: #DECB37;
+    color: black;
+    font-weight: bold;
+  }
+
+  .header-image {
+    max-width: fit-content;
+    margin-left: 4rem;
+  }
 }

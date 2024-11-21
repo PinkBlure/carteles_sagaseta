@@ -26,3 +26,29 @@ footer .link:hover {
   color: black;
   font-weight: bold;
 }
+
+@media (min-width: 768px) {
+
+  footer {
+    background-color: #1C2E5E;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer .query {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  footer .link:hover {
+    background-color: #DECB37;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px; /* Bordes redondeados */
+  }
+}
